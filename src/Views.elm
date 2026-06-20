@@ -230,7 +230,7 @@ details model =
             , tr []
                 [ tdLeft "Вкупно придонеси и данок"
                 , td
-                    (Round.round 4
+                    (Round.round 2
                         (if model.bruto == 0 then
                             0
 
