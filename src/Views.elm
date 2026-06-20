@@ -229,13 +229,6 @@ details model =
                 ]
             , tr []
                 [ tdLeft "Вкупно придонеси и данок"
-                , td ""
-                , td (String.fromInt model.vkupnoDavacki)
-                , td "МКД"
-                ]
-            , tr []
-                [ tdLeft "Придонеси и данок ко проценти од бруто платата"
-                , td ""
                 , td
                     (Round.round 4
                         (if model.bruto == 0 then
@@ -245,7 +238,8 @@ details model =
                             toFloat model.vkupnoDavacki / toFloat model.bruto
                         )
                     )
-                , td ""
+                , td (String.fromInt model.vkupnoDavacki)
+                , td "МКД"
                 ]
             , tr bold
                 [ tdLeft "Нето"
